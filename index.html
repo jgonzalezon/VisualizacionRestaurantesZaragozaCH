@@ -1,7 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Mapa Interactivo</title>
+  <!-- Estilos de Bootstrap para un diseño atractivo -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+    .map-container {
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      background-color: #fff;
+      padding: 15px;
+      min-height: 400px;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="container">
+    <h1 class="text-center my-4">Mi Mapa Interactivo</h1>
+    <div id="contenedorMapa" class="map-container">
+      <!-- Aquí se cargará el contenido de mapa_restaurantes.html -->
+    </div>
+  </div>
+  <!-- Carga de jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#contenedorMapa").load("mapa_restaurantes.html");
+    });
+  </script>
 </body>
 </html>
